@@ -1,0 +1,44 @@
+{% extends 'adminindex.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/add_user_POST"> {% csrf_token %}
+    <table class="table table-bordered">
+        <tr>
+            <td> username</td>
+            <td><input type="text" name="username" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>firstname</td>
+            <td><input type="text" name="first_name" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>last name</td>
+            <td><input type="text" name="last_name" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input type="text" name="email" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="text" name="password" class="form-control"></td>
+        </tr>
+        <tr>
+            <td>confirm password</td>
+            <td><input type="text" name="confirm_password" class="form-control"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" class="btn btn-success"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
+{% endblock %}
